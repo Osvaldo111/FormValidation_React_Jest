@@ -6,17 +6,24 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      message: ""
+      message: "Form is Incomplete!",
+      value: true
     };
   }
 
   messageDisplay = message => {
     this.setState({ message: message });
   };
+
+  checkValid = value => {
+    // console.log(value, "************************");
+    return value;
+  };
+
   render() {
     return (
       <div>
-        <Form messageFunc={this.messageDisplay}></Form>
+        <Form isFormValid={this.checkValid}></Form>
         <Message message={this.state.message}></Message>
       </div>
     );

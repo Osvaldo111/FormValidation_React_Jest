@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, useCallback } from "react";
 import { PropTypes } from "prop-types";
 
 class Form extends Component {
   constructor(props) {
     super(props);
+    this.submitForm = this.submitForm.bind(this);
+    this.verification = this.verification.bind(this);
     this.state = {
       isEmailValid: false,
       isNameValid: false,
@@ -13,7 +15,8 @@ class Form extends Component {
       email: "",
       phone: "",
       blogURL: "",
-      message: ""
+      message: "",
+      formSpy: true
     };
   }
 
@@ -30,39 +33,68 @@ class Form extends Component {
     this.setState({ blogURL: event.target.value });
   };
 
-  submitForm = () => {
-    Promise.resolve(1)
-      .then(() => {
-        this.verifyName();
-        this.verifyEmail();
-        this.verifyPhone();
-        this.verifyURL();
-      })
-      .then(() => {
-        const {
-          isNameValid,
-          isEmailValid,
-          isPhoneValid,
-          isUrlValid
-        } = this.state;
-        if (isNameValid && isEmailValid && isPhoneValid && isUrlValid) {
-          this.props.messageFunc("Form is Complete!");
-        } else {
-          this.props.messageFunc("Form is Incomplete!");
-        }
+  submitForm() {
+    const theProps = this.props;
 
-        console.log(this.state);
-      });
-  };
+    this.setState(
+      {
+        isEmailValid: false,
+        isNameValid: false,
+        isPhoneValid: false,
+        isUrlValid: false
+      },
+      () => {
+        this.verification(results => {
+          const { name, email, phone, url } = results;
+          this.setState(
+            {
+              isNameValid: name,
+              isEmailValid: email,
+              isPhoneValid: phone,
+              isUrlValid: url
+            },
+            () => {
+              const {
+                isNameValid,
+                isEmailValid,
+                isPhoneValid,
+                isUrlValid
+              } = this.state;
+
+              if (isNameValid && isEmailValid && isPhoneValid && isUrlValid) {
+                theProps.isFormValid(true);
+              } else {
+                theProps.isFormValid(false);
+              }
+            }
+          );
+        });
+      }
+    );
+  }
+
+  verification(callback) {
+    const name = this.verifyName();
+    const email = this.verifyEmail();
+    const phone = this.verifyPhone();
+    const url = this.verifyURL();
+    const results = {
+      name: name,
+      email: email,
+      phone: phone,
+      url: url
+    };
+    callback(results);
+  }
 
   verifyName = () => {
     const { name } = this.state;
     var letters = /^[A-Za-z]+$/;
     const lengthName = name.length;
     if (lengthName >= 3 && lengthName <= 30 && name.match(letters)) {
-      this.setState({ isNameValid: true });
+      return true;
     } else {
-      this.setState({ isNameValid: false });
+      return false;
     }
   };
 
@@ -70,9 +102,9 @@ class Form extends Component {
     const { email } = this.state;
     var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     if (email.match(emailPattern)) {
-      this.setState({ isEmailValid: true });
+      return true;
     } else {
-      this.setState({ isEmailValid: false });
+      return false;
     }
   };
 
@@ -88,9 +120,9 @@ class Form extends Component {
       lastNum != 0 &&
       lastNum != 1
     ) {
-      this.setState({ isPhoneValid: true });
+      return true;
     } else {
-      this.setState({ isPhoneValid: false });
+      return false;
     }
   };
 
@@ -98,9 +130,9 @@ class Form extends Component {
     const { blogURL } = this.state;
     var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
     if (blogURL.match(regex)) {
-      this.setState({ isUrlValid: true });
+      return true;
     } else {
-      this.setState({ isUrlValid: false });
+      return false;
     }
   };
   render() {
@@ -111,7 +143,12 @@ class Form extends Component {
         <form>
           <h3>
             Name:
-            <input type="text" value={name} onChange={this.handleChangeName} />
+            <input
+              type="text"
+              value={name}
+              onChange={this.handleChangeName}
+              className="name"
+            />
           </h3>
           <h3>
             Email:
@@ -119,6 +156,7 @@ class Form extends Component {
               type="text"
               value={email}
               onChange={this.handleChangeEmail}
+              className="email"
             />
           </h3>
           <h3>
@@ -127,6 +165,7 @@ class Form extends Component {
               type="text"
               value={phone}
               onChange={this.handleChangePhone}
+              className="phone"
             />
           </h3>
           <h3>
@@ -135,6 +174,7 @@ class Form extends Component {
               type="text"
               value={blogURL}
               onChange={this.handleChangeBlogURL}
+              className="url"
             />
           </h3>
           <div className="small-6 small-centered text-center columns">
@@ -142,6 +182,7 @@ class Form extends Component {
               href="#"
               className="button success expand round text-center"
               onClick={this.submitForm}
+              className="button"
             >
               Verify
             </a>

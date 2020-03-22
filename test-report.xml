@@ -1,92 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite id="0" name="C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js" errors="0" package="C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js" hostname="localhost" tests="8" failures="6" time="2.629" timestamp="2020-03-20T04:55:13">
+  <testsuite id="0" name="C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js" errors="0" package="C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js" hostname="localhost" tests="8" failures="0" time="2.296" timestamp="2020-03-22T02:58:34">
     <properties>
     </properties>
     <testcase classname="Form Validation &lt;App /&gt;" name="renders without crashing" time="0">
     </testcase>
     <testcase classname="Form Validation &lt;App /&gt;" name="check default message" time="0">
-      <failure message="Error: [2mexpect([22m[31mreceived[39m[2m).toEqual([22m[32mexpected[39m[2m)[22m
-
-Expected value to equal:
-  [32m&quot;Form is Incomplete!&quot;[39m
-Received:
-  [31m&quot;&quot;[39m
-    at Object.&lt;anonymous&gt; (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js:25:32)
-    at Object.asyncFn (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\jasmine-async.js:68:30)
-    at C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\queueRunner.js:38:12
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\queueRunner.js:31:21)
-    at C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\p-map\index.js:46:16
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)" type="AssertionError">
-      </failure>
     </testcase>
     <testcase classname="Form Validation &lt;App /&gt;" name="check if all forms fields exist" time="0">
     </testcase>
     <testcase classname="Form Validation &lt;App /&gt;" name="check entire form validation when the form is valid" time="0">
-      <failure message="Error: Method “simulate” is only meant to be run on a single node. 0 found instead.
-    at ReactWrapper.single (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\enzyme\build\ReactWrapper.js:1651:17)
-    at ReactWrapper.simulate (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\enzyme\build\ReactWrapper.js:928:21)
-    at Object.&lt;anonymous&gt; (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js:37:24)
-    at Object.asyncFn (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\jasmine-async.js:68:30)
-    at C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\queueRunner.js:38:12
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\queueRunner.js:31:21)
-    at C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\p-map\index.js:46:16
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)" type="AssertionError">
-      </failure>
     </testcase>
     <testcase classname="Form Validation &lt;App /&gt;" name="check entire form validation when the phone number is invalid" time="0">
-      <failure message="Error: Method “simulate” is only meant to be run on a single node. 0 found instead.
-    at ReactWrapper.single (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\enzyme\build\ReactWrapper.js:1651:17)
-    at ReactWrapper.simulate (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\enzyme\build\ReactWrapper.js:928:21)
-    at Object.&lt;anonymous&gt; (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js:48:24)
-    at Object.asyncFn (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\jasmine-async.js:68:30)
-    at C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\queueRunner.js:38:12
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\queueRunner.js:31:21)
-    at C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\p-map\index.js:46:16
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)" type="AssertionError">
-      </failure>
     </testcase>
     <testcase classname="Form Validation &lt;App /&gt;" name="check entire form validation when the email is invalid" time="0">
-      <failure message="Error: Method “simulate” is only meant to be run on a single node. 0 found instead.
-    at ReactWrapper.single (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\enzyme\build\ReactWrapper.js:1651:17)
-    at ReactWrapper.simulate (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\enzyme\build\ReactWrapper.js:928:21)
-    at Object.&lt;anonymous&gt; (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js:59:24)
-    at Object.asyncFn (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\jasmine-async.js:68:30)
-    at C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\queueRunner.js:38:12
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\queueRunner.js:31:21)
-    at C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\p-map\index.js:46:16
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)" type="AssertionError">
-      </failure>
     </testcase>
     <testcase classname="Form Validation &lt;App /&gt;" name="check entire form validation when the url is invalid" time="0">
-      <failure message="Error: Method “simulate” is only meant to be run on a single node. 0 found instead.
-    at ReactWrapper.single (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\enzyme\build\ReactWrapper.js:1651:17)
-    at ReactWrapper.simulate (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\enzyme\build\ReactWrapper.js:928:21)
-    at Object.&lt;anonymous&gt; (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js:70:24)
-    at Object.asyncFn (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\jasmine-async.js:68:30)
-    at C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\queueRunner.js:38:12
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\queueRunner.js:31:21)
-    at C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\p-map\index.js:46:16
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)" type="AssertionError">
-      </failure>
     </testcase>
     <testcase classname="Form Validation &lt;App /&gt;" name="check form validation when the entire form is invalid" time="0">
-      <failure message="Error: Method “simulate” is only meant to be run on a single node. 0 found instead.
-    at ReactWrapper.single (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\enzyme\build\ReactWrapper.js:1651:17)
-    at ReactWrapper.simulate (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\enzyme\build\ReactWrapper.js:928:21)
-    at Object.&lt;anonymous&gt; (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js:81:24)
-    at Object.asyncFn (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\jasmine-async.js:68:30)
-    at C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\queueRunner.js:38:12
-    at new Promise (&lt;anonymous&gt;)
-    at mapper (C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\jest-jasmine2\build\queueRunner.js:31:21)
-    at C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\node_modules\p-map\index.js:46:16
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)" type="AssertionError">
-      </failure>
     </testcase>
     <system-out/>
     <system-err/>
