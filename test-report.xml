@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite id="0" name="C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js" errors="0" package="C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js" hostname="localhost" tests="8" failures="0" time="2.296" timestamp="2020-03-22T02:58:34">
+  <testsuite id="0" name="C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js" errors="0" package="C:\Users\osval\Downloads\Test Job\Another\4d03a120-e132-4983-a5d8-cfd48ddffe4a\src\tests\App.test.js" hostname="localhost" tests="8" failures="0" time="3.282" timestamp="2020-03-22T03:45:39">
     <properties>
     </properties>
     <testcase classname="Form Validation &lt;App /&gt;" name="renders without crashing" time="0">

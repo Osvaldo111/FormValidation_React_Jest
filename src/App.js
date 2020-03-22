@@ -16,8 +16,12 @@ class App extends Component {
   };
 
   checkValid = value => {
-    // console.log(value, "************************");
-    return value;
+    if (value) {
+      console.log(value);
+      this.setState({ message: "Form is Complete!" });
+    } else {
+      this.setState({ message: "Form is Incomplete!" });
+    }
   };
 
   render() {
